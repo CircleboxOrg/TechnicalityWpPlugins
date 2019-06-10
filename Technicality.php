@@ -30,14 +30,15 @@ add_action('wp_head', 'hook_gaheader');
 function technicality_settings_init()
 {
     // register a new setting for "reading" page
-    register_setting('reading', 'technicality_gaTrackingId');
+    unregister_setting('reading', 'technicality_gaTrackingId');
+    register_setting('general', 'technicality_gaTrackingId');
  
     // register a new field in the "wporg_settings_section" section, inside the "reading" page
     add_settings_field(
         'technicality_gaTrackingId_field',
         'Google Analytics Tracking ID',
         'technicality_settings_field_cb',
-        'reading',
+        'general',
         'default'
     );
 }
