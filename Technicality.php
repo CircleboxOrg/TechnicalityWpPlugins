@@ -36,7 +36,7 @@ function technicality_settings_init()
         'technicality_gaTrackingId_field',
         'Google Analytics Tracking ID',
         'technicality_settings_field_cb',
-        'reading'
+        'reading',
         'default'
     );
 }
