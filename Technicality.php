@@ -19,7 +19,7 @@ function hook_gaheader() {
             gtag('js', new Date());
 
             //gtag('config', 'UA-141740265-2');
-            gtag('config', <?php esc_attr( $setting ) ?>)
+            gtag('config', <?php echo esc_attr( $setting ) ?>)
         </script>
     <?php
     }
