@@ -12,14 +12,12 @@ function hook_gaheader() {
     {
     ?>
         <!-- Global site tag (gtag.js) - Google Analytics -->
-        //<script async src="https://www.googletagmanager.com/gtag/js?id=UA-141740265-2"></script>
         <script async src="https://www.googletagmanager.com/gtag/js?id=<?php echo esc_attr( $setting ) ?>"></script>
         <script>
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
 
-            //gtag('config', 'UA-141740265-2');
             gtag('config', <?php echo esc_attr( $setting ) ?>)
         </script>
     <?php
@@ -30,7 +28,6 @@ add_action('wp_head', 'hook_gaheader');
 function technicality_settings_init()
 {
     // register a new setting for "reading" page
-    unregister_setting('reading', 'technicality_gaTrackingId');
     register_setting('general', 'technicality_gaTrackingId');
  
     // register a new field in the "wporg_settings_section" section, inside the "reading" page
