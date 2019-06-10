@@ -12,7 +12,8 @@ function hook_gaheader() {
     {
     ?>
         <!-- Global site tag (gtag.js) - Google Analytics -->
-        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-141740265-2"></script>
+        //<script async src="https://www.googletagmanager.com/gtag/js?id=UA-141740265-2"></script>
+        <script async src="https://www.googletagmanager.com/gtag/js?id=<?php echo esc_attr( $setting ) ?>"></script>
         <script>
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
