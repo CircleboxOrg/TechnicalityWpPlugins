@@ -30,13 +30,21 @@ function technicality_settings_init()
     // register a new setting for "reading" page
     register_setting('general', 'technicality_gaTrackingId');
  
+    // register a new section in the "reading" page
+    add_settings_section(
+        'technicalityGA_settings_section',
+        'Technicality Google Analytics',
+        'technicalityGA_settings_section_cb',
+        'general'
+    );
+
     // register a new field in the "wporg_settings_section" section, inside the "reading" page
     add_settings_field(
         'technicality_gaTrackingId_field',
         'Google Analytics Tracking ID',
-        'technicality_settings_field_cb',
+        'technicalityGA_settings_field_cb',
         'general',
-        'default'
+        'technicalityGA_settings_section'
     );
 }
  
@@ -49,8 +57,14 @@ add_action('admin_init', 'technicality_settings_init');
  * callback functions
  */
  
-// field content cb
-function technicality_settings_field_cb()
+// section content cb
+function technicalityGA_settings_section_cb()
+{
+    echo '<p>Technicality Google Analytics</p>';
+}
+
+ // field content cb
+function technicalityGA_settings_field_cb()
 {
     // get the value of the setting we've registered with register_setting()
     $setting = get_option('technicality_gaTrackingId');
