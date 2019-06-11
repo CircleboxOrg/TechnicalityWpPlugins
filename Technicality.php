@@ -1,9 +1,11 @@
 <?php
 /**
  * Plugin Name: Technicality
+ * Plugin URI: http://technicality.online/Home/SoftwareDev
  * Version: 20190610
  * Description: This plugin adds features to the Technicality blog
- * Author: Jeff Trotman
+ * Author: Technicality LLC, Jeff Trotman
+ * Author URI: http://technicality.online
  */
  
 function hook_gaheader() {
