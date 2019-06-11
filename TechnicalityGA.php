@@ -1,9 +1,9 @@
 <?php
 /**
- * Plugin Name: Technicality
- * Plugin URI: http://technicality.online/Home/SoftwareDev
+ * Plugin Name: Technicality Google Analytics
+ * Plugin URI: http://technicality.online/products/GoogleAnalyticsWordPressPlugin
  * Version: 20190610
- * Description: This plugin adds features to the Technicality blog
+ * Description: Simple - enter your Google Tracking ID in a new field on the General Settings page and the Google Analytics script will be added to the header of each post and page.
  * Author: Technicality LLC
  * Author URI: http://technicality.online
  */
@@ -13,7 +13,7 @@ function hook_gaheader() {
     if (isset( $setting ))
     {
     ?>
-        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <!-- Global site tag (gtag.js) - added by Technicality Google Analytics plugin -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=<?php echo esc_attr( $setting ) ?>"></script>
         <script>
             window.dataLayer = window.dataLayer || [];
@@ -22,6 +22,7 @@ function hook_gaheader() {
 
             gtag('config', <?php echo esc_attr( $setting ) ?>)
         </script>
+        <!-- end of section added by Technicality Google Analytics pluging -->
     <?php
     }
 }
