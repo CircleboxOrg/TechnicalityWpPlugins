@@ -1,7 +1,7 @@
 <?php
 /**
  * Plugin Name: Technicality
- * Version: 20190609
+ * Version: 20190610
  * Description: This plugin adds features to the Technicality blog
  * Author: Jeff Trotman
  */
@@ -60,7 +60,7 @@ add_action('admin_init', 'technicality_settings_init');
 // section content cb
 function technicalityGA_settings_section_cb()
 {
-    echo '<p>Technicality Google Analytics</p>';
+    //don't do anything;
 }
 
  // field content cb
