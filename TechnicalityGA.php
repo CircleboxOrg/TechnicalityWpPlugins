@@ -20,7 +20,7 @@ function hook_gaheader() {
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
 
-            gtag('config', <?php echo esc_attr( $setting ) ?>)
+            gtag('config', '<?php echo esc_attr( $setting ) ?>')
         </script>
         <!-- end of section added by Technicality Google Analytics pluging -->
     <?php
