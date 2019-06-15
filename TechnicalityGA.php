@@ -2,7 +2,7 @@
 /**
  * Plugin Name: Technicality Google Analytics
  * Plugin URI: http://technicality.online/products/GoogleAnalyticsWordPressPlugin
- * Version: 1.0.0
+ * Version: 1.0.1
  * Description: Simple - enter your Google Tracking ID in a new field on the General Settings page and the Google Analytics script will be added to the header of each post and page.
  * Author: Jeff Trotman, Technicality LLC
  * Author URI: http://technicality.online
